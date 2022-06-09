@@ -6,7 +6,9 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: #000000;
+  background-color: #dddddd;
+  border-bottom: 3px solid #ff5722;
 `;
 
 export { HeaderStyled };

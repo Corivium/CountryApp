@@ -8,8 +8,22 @@ const ImageStyled = styled.img`
   align-items: center;  
 
   ${props => props.large && css`
-    width: 50rem;
+    width: 20rem;
     height: auto;
+
+    @media only screen and (min-width: 767px) {
+        width: 80rem;
+    }
+  `}
+
+  ${props => props.small && css`
+    width: 10rem;
+    height: 6rem;
+
+    @media only screen and (min-width: 767px) {
+      width: 15rem;
+      height: 10rem;
+    }
   `}
 `;
 

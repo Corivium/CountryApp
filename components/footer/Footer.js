@@ -4,7 +4,7 @@ const Footer = () => {
 
   return (
     <FooterStyled>
-      Footer Content Here
+      Corey Clancy - 2022
     </FooterStyled>
   );
 }

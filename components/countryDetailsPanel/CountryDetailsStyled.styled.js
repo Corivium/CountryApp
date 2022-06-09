@@ -1,69 +1,89 @@
 import styled from "styled-components";
 
 const CountryDetailsStyled = styled.div`
-  width: 80rem;
-  min-height: 50rem;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  background-color: lightgrey;
   margin: 0 auto;
+  padding: 1.6rem;
   position: relative;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.1);
+  gap: 2.4rem;
 
-  .leftpanel {
-	  box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+  @media only screen and (min-width: 767px) {
+    width: 120rem;
+    margin: 4rem auto;
+  gap: 4rem;
+  }
+
+  .back__buton {
+
+  }
+
+  .image__panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
     border-radius: 0.5rem;
     overflow: hidden;
-    height: 90%;
-    width: 45rem;
-    left: -5rem;
-    position: absolute;
-    max-height: 60rem;
-    top: 5rem;
+
+    @media only screen and (min-width: 767px) {
+      height: 50rem;
+    }
 
     img {
-      object-fit: cover;   
       width: 100%;
-      height: 100%;
-      overflow: hidden;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5rem;
     }
   }
 
-  .rightpanel {
+  .content__panel {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5rem;
-    height: 100%;
-    width: 40rem;
-    margin-left: 40rem;
+    padding: 2.4rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: rgb(2 36 41 / 10%) 0px 8px 16px 0px;
     gap: 4rem;
 
-    .country__name {
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -22px;
-        width: 100%;
-        height: 2px;
-        margin: 5px 0 0;
-        background-color: orange;
+    p {
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ff5722;
+        margin-right: 1.2rem;
       }
+
     }
+  }
+
+  .bordering__countries {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: rgb(2 36 41 / 10%) 0px 8px 16px 0px;
+    gap: 4rem;
 
     .border__countries {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 50% 1fr;
-      gap: 2.4rem;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 2.4rem;
+
+      @media only screen and (min-width: 767px) {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+      }
     }
   }
 `;

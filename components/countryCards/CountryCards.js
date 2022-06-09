@@ -9,9 +9,10 @@ const CountryCards = ({ countries }) => {
   return (
     <CountryCardContainer>
       {countries?.map((country) => {
-        const { name, capital, flags, population, cca2, cioc, currencies } = country;
+        // destructure all values from country props
+        const { name, capital, flags, population, cca2, cioc } = country;
+        // destructure common from name and rename as countryName
         const { common: countryName } = name;
-        const code = Object.keys(currencies)[0];
         return (
           <CountryCardStyled key={cca2}>
             <Link
@@ -20,10 +21,14 @@ const CountryCards = ({ countries }) => {
               }}
             >
             <a>
-              <Image src={flags} />
-              <h4>{countryName}</h4>
-              <p>{capital}</p>
-              <span>{population}</span>
+              <div className="left__panel">
+                <Image src={flags} large/>
+              </div>
+              <div className="right__panel">
+                <h2 className="country__name">{countryName}</h2>
+                <p><span>Capital:</span> {capital}</p>
+                <p><span>Population:</span> {population}</p>
+              </div>
             </a>
             </Link>
           </CountryCardStyled>

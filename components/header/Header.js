@@ -1,9 +1,15 @@
+import Link from "next/link";
 import { HeaderStyled } from "./HeaderStyled.styled";
 
 const Header = () => {
+  
   return (
     <HeaderStyled>
-      <h1>Countries App</h1>
+      <Link href="/">
+        <a>
+          <h1>Countries App</h1>
+        </a>
+      </Link>
     </HeaderStyled>
   )
 }
