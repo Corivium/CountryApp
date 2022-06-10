@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Link from 'next/link'
-import CountryCardStyled from "./CountryCards.styled";
+import CountryCardStyled from "./CountryCardsStyled.styled";
 import { CountryCardContainer } from "./CountryCardContainer.styled";
 import { Image } from "../common/image/Image";
 

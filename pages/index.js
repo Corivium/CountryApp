@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import CountryCards from '../components/countryCards/countryCards';
+import CountryCards from '../components/countryCards/CountryCards';
 import BackToTopButton from '../components/common/button/BackToTopButton';
 import { endpoint } from '../config/config';
 
