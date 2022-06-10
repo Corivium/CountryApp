@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-const CountryCards = dynamic(() => import('../components/countryCards/CountryCards'));
-const BackToTopButton = dynamic(() => import('../components/common/button/BackToTopButton'));
+import CountryCards from '../components/countryCards/CountryCards';
+import BackToTopButton from '../components/common/button/BackToTopButton';
 import { endpoint } from '../config/config';
 
 //Hooks
@@ -41,8 +40,7 @@ const Homepage = ({ countryData }) => {
 }
 
 // call api at build time on server side
-// if this api data was changing, then getServerSideProps would be used
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const customFilters = "fields=name,capital,flags,population,cca2,cioc,currencies";
   try {
     // calling api with custom filters to only return data required
