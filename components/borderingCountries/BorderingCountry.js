@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Link from "next/link";
 import { Image } from "../common/image/Image";
 import { BorderingCountryStyled } from "./BorderingCountryStyled.styled";
@@ -6,7 +7,7 @@ import { BorderingCountryStyled } from "./BorderingCountryStyled.styled";
 import Apphook from "../../hooks/Apphook";
 
 const BorderingCountry = ({ border }) => {
-  const { name, capital, flags, population, cca2, cioc } = border;
+  const { name, capital, flags, population, cioc } = border;
   const { common: borderName } = name;
   const { formatPopulation } = Apphook();
 
@@ -31,3 +32,7 @@ const BorderingCountry = ({ border }) => {
 }
 
 export default BorderingCountry;
+
+BorderingCountry.propTypes = {
+  border: PropTypes.object
+}

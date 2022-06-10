@@ -1,4 +1,4 @@
-import Link from "next/link";
+import PropTypes from "prop-types";
 import CountryDetailsPanel from "../../components/countryDetailsPanel/CountryDetailsPanel";
 import { endpoint } from "../../config/config";
 
@@ -30,3 +30,8 @@ export async function getServerSideProps({ query }) {
 }
 
 export default CountryDetails;
+
+CountryDetails.propTypes = {
+  countryDetailsData: PropTypes.array,
+  borderCountryData: PropTypes.array
+}

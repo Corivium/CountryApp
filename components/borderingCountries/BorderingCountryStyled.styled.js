@@ -3,7 +3,7 @@ import styled from "styled-components";
 const BorderingCountryStyled = styled.div`
   display: flex;
   flex-direction: column; 
-  background-color: #f3f3f3;
+  background-color: ${props => props.theme.lightGrey};
   padding: 1.6rem;
   position: relative;
   min-height: 15rem;
@@ -17,19 +17,19 @@ const BorderingCountryStyled = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: #ff5722;
+    background-color: ${props => props.theme.orange};
     
     .info__panel {
 
       p {
-        color: #ffffff;
+        color: ${props => props.theme.white};
 
         &.country__title {
-          color: #ffffff;
+          color: ${props => props.theme.white};
         }
 
         span {
-          color: #000000;
+          color: ${props => props.theme.black};
         }
       }
     }
@@ -60,7 +60,7 @@ const BorderingCountryStyled = styled.div`
         }
 
         span {
-          color: #ff5722;
+          color:  ${props => props.theme.orange};
           font-weight: 700;
           margin-right: 1.2rem;
           transition: ease-in-out all 0.3s;

@@ -47,7 +47,7 @@ const CountryDetailsStyled = styled.div`
     flex-direction: column;
     padding: 2.4rem;
     border-radius: 0.5rem;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.white};
     box-shadow: rgb(2 36 41 / 10%) 0px 8px 16px 0px;
     gap: 4rem;
 
@@ -69,7 +69,7 @@ const CountryDetailsStyled = styled.div`
     flex-direction: column;
     padding: 2.4rem;
     border-radius: 0.5rem;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.white};
     box-shadow: rgb(2 36 41 / 10%) 0px 8px 16px 0px;
     gap: 4rem;
 

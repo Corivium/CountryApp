@@ -5,7 +5,7 @@ const BackButtonStyled = styled.button`
   justify-content: center;
   align-items: center;
   background-color: darkgrey;
-  color: #ffffff;
+  color: ${props => props.theme.white};
   min-width: 10rem;
   min-height: 4rem;
   padding: 1.2rem;
@@ -14,8 +14,8 @@ const BackButtonStyled = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: #000000;
-    background-color: #ff5722;
+    color: ${props => props.theme.black};
+    background-color: ${props => props.theme.orange};
   }
 
   &.back__button {

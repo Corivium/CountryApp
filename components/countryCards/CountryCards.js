@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import Link from 'next/link'
 import CountryCardStyled from "./CountryCards.styled";
 import { CountryCardContainer } from "./CountryCardContainer.styled";
@@ -14,7 +14,7 @@ const CountryCards = ({ countries }) => {
         // destructure common from name and rename as countryName
         const { common: countryName } = name;
         return (
-          <CountryCardStyled key={cca2}>
+          <CountryCardStyled key={cca2} data-testid="country-card-test">
             <Link
               href={{
                 pathname: `/country/${cioc}`
@@ -40,6 +40,6 @@ const CountryCards = ({ countries }) => {
 
 export default CountryCards;
 
-/* CountryCards.propTypes = {
+CountryCards.propTypes = {
   countries: PropTypes.array
-} */
+};

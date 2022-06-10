@@ -6,10 +6,10 @@ const CountryCardStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: lightgrey;
+  background-color: ${props => props.theme.lightGrey};
   margin: 0 auto;
   position: relative;
-  background-color: #ffffff;
+  background-color:  ${props => props.theme.white};
   border-radius: 0.5rem;
   box-shadow: 0.4rem 0.4rem 2.5rem -0.2rem rgba(0, 0, 0, 0.1);
   transition: ease-in-out all 0.3s;
@@ -20,7 +20,7 @@ const CountryCardStyled = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: #ff5722;
+    background-color:  ${props => props.theme.orange};;
 
     .left__panel {
       left: -8rem;
@@ -29,18 +29,18 @@ const CountryCardStyled = styled.div`
     .right__panel {
 
       .country__name {
-        color: #ffffff;
+        color:  ${props => props.theme.white};
 
         &:after {
-          background-color: #000000;
+          background-color:  ${props => props.theme.black};
         }
       }
 
       p {
-        color: #ffffff;
+        color:  ${props => props.theme.white};
 
         span {
-          color: #000000;
+          color:  ${props => props.theme.black};
         }
       }
     }
@@ -114,7 +114,7 @@ const CountryCardStyled = styled.div`
         width: 100%;
         height: 2px;
         margin: 5px 0 0;
-        background-color: #ff5722;
+        background-color:  ${props => props.theme.orange};
         transition: ease-in-out all 0.3s;
       }
     }
@@ -134,7 +134,7 @@ const CountryCardStyled = styled.div`
         font-size: 2rem;
         line-height: 4rem;
         font-weight: 700;
-        color: #ff5722;
+        color:  ${props => props.theme.orange};
       }
     }
   }

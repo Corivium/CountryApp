@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import { CountryDetailsStyled } from "./CountryDetailsStyled.styled";
 import { Image } from "../common/image/Image";
@@ -23,7 +24,6 @@ const CountryDetailsPanel = ({ data, borderingCountries }) => {
 
   return (
     <>
-    {console.log("borders: ", borderingCountries)}
       <BackButtonStyled
         className="back__button"
         onClick={() => router.push("/")}
@@ -68,7 +68,7 @@ const CountryDetailsPanel = ({ data, borderingCountries }) => {
             <h5>Bordering Countries:</h5>
             <div className="border__countries">
               {borderingCountries.map((border) => {
-                return <BorderingCountry border={border} key={border.cca2} />;
+                return <BorderingCountry border={border} key={border.cca2} data-testid="borderCountry-test"/>;
               })}
             </div>
           </div>
@@ -79,3 +79,8 @@ const CountryDetailsPanel = ({ data, borderingCountries }) => {
 };
 
 export default CountryDetailsPanel;
+
+CountryDetailsPanel.propTypes = {
+  data: PropTypes.object,
+  borderingCountries: PropTypes.array,
+}

@@ -8,16 +8,16 @@ const BackToTopButtonStyled = styled.button`
   padding: 2.4rem 1.2rem;
   width: 5rem;
   height: 5rem;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: ${props => props.theme.black};
+  color: ${props => props.theme.white};
   bottom: 5rem;
   right: 5rem;
   transition: ease-in-out all 0.3s;
 
   &:hover {
     cursor: pointer;
-    background-color: #ff5722;
-    color: #000000;
+    background-color: ${props => props.theme.orange};
+    color: ${props => props.theme.black};
   }
 
   svg {

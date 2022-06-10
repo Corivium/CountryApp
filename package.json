@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -21,15 +21,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-runtime": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "babel-jest": "^28.1.1",
-    "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1",
-    "@babel/plugin-transform-runtime": "^7.18.2",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1"
   }
 }

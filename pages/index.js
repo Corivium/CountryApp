@@ -7,7 +7,6 @@ import { endpoint } from '../config/config';
 import Apphook from "../hooks/Apphook";
 
 const Homepage = ({ countryData }) => {
-
   const [isScrolled, setIsScrolled] = useState(false);
   const { backToTopScroll } = Apphook();
 

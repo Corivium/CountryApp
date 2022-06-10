@@ -8,6 +8,7 @@ const BackToTopButton = ({ label, onClick, className, ariaLabel }) => {
       onClick={onClick}
       role="button"
       aria-label={ariaLabel}
+      data-testid="backtotopbtn-test"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
