@@ -1,6 +1,7 @@
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import CountryCards from '../components/countryCards/CountryCards';
-import BackToTopButton from '../components/common/button/BackToTopButton';
+const CountryCards = dynamic(() => import('../components/countryCards/CountryCards'));
+const BackToTopButton = dynamic(() => import('../components/common/button/BackToTopButton'));
 import { endpoint } from '../config/config';
 
 //Hooks
@@ -23,7 +24,7 @@ const Homepage = ({ countryData }) => {
 
   useEffect(() => {
     backToTopScroll(setIsScrolled);
-  }, []);
+  }, [backToTopScroll]);
 
   return (
     <>
